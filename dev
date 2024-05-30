@@ -2,6 +2,7 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local clipflipver = "2.0.27"
+local buildtype = "Development Version"
 local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon", "moreunc"}
 local unsupported = {"incognito", "evon", "fluxus", "lunar"}
 local solara = {"solara"}
@@ -13,7 +14,7 @@ end
 
 local Window = Fluent:CreateWindow({
     Title = "Clipflip GUI " .. clipflipver,
-    SubTitle = "Development Version",
+    SubTitle = buildtype,
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false,
@@ -755,7 +756,7 @@ end
         end
     })
         Tabs.About:AddParagraph({
-        Title = "You are using Clipflip GUI Dev",
+        Title = "You are using Clipflip GUI ".. buildtype,
         Content = clipflipver.. " - ".. identifyexecutor()
     })
 end
