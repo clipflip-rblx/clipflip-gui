@@ -3,7 +3,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local clipflipver = "2.0.27"
 local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon", "moreunc"}
-local unsupported = {"incognito", "evon", "fluxus"}
+local unsupported = {"incognito", "evon", "fluxus", "lunar"}
 local solara = {"solara"}
 if not table.find(solara, string.lower(identifyexecutor())) then
 else
@@ -32,12 +32,24 @@ local Tabs = {
 local Options = Fluent.Options
 
 do
+if not table.find(supported, string.lower(identifyexecutor())) then
+ if not table.find(unsupported, string.lower(identifyexecutor())) then
     Fluent:Notify({
-        Title = "Notification",
-        Content = "This is a notification",
-        SubContent = "SubContent", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
+        Title = "Unverified executor",
+        Content = getexecutorname().. " is an unverified executor.",
+        SubContent = "We recommend using Arceus X or Solara.",
+        Duration = 10
     })
+else
+    Fluent:Notify({
+        Title = "Unsupported executor",
+        Content = getexecutorname().. " is an unsupported executor.",
+        SubContent = "We recommend using Arceus X or Solara.",
+        Duration = 10
+    })
+end
+else
+end
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
         Description = "Gives you information about how many functions your executor supports",
@@ -744,7 +756,7 @@ do
     })
         Tabs.About:AddParagraph({
         Title = "You are using Clipflip GUI Dev",
-        Content = "version 2.0.27 - ".. identifyexecutor()
+        Content = clipflipver.. " - ".. identifyexecutor()
     })
 end
 
