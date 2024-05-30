@@ -1,0 +1,286 @@
+--Clipflip GUI v2.0.26 beta
+--Changelog:
+--fixed this not working at all (bruh)
+--added fates admin
+print("Initializing Clipflip GUI...")
+loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-MoreUNC-13110'))()
+local incognito = {"incognito"}
+local solara = {"solara"}
+local asasa = {""}
+local incognitov1supportvalue = {""}
+if not table.find(solara, string.lower(identifyexecutor())) then
+else
+    enablenilinstances()
+end
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon", "moreunc"}
+local unsupported = {"incognito", "evon", "fluxus"}
+local blacklisted = {"oxycontin", "oxy", "verbose", "feather"}
+if not table.find(blacklisted, string.lower(identifyexecutor())) then
+    local Window = Rayfield:CreateWindow({
+   Name = "Clipflip GUI",
+   LoadingTitle = "Clipflip GUI Beta",
+   LoadingSubtitle = "Made by Clipflip",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil,
+      FileName = "ClipflipGUIV2"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink",
+      RememberJoins = true
+   }
+})
+local Tab = Window:CreateTab("Executor Testing", 4483362458)
+local Tab2 = Window:CreateTab("Popular Scripts", 4483362458)
+local Tab3 = Window:CreateTab("Useful Tools", 4483362458)
+local Tab100 = Window:CreateTab("About", 4483362458)
+local PrintName = Tab:CreateButton({
+   Name = "Print Executor Name",
+   Callback = function()
+   print(identifyexecutor())
+   end,
+})
+local UNCTest = Tab:CreateButton({
+   Name = "Executor UNC Test",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua"))()
+   end,
+})
+local GetExecLevel = Tab:CreateButton({
+   Name = "Print Executor Level",
+   Callback = function()
+   printidentity()
+   end,
+})
+local VulnsTest = Tab:CreateButton({
+   Name = "Executor Vulnerability Test",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/fissurectomy/test/main/executor_vuln_test.lua"))()
+   end,
+})
+local IYR = Tab2:CreateButton({
+   Name = "Infinite Yield Reborn",
+   Callback = function()
+   loadstring(game:HttpGet("https://github.com/fuckusfm/infiniteyield-reborn/raw/master/source"))()
+   end,
+})
+local NamelessAdmin = Tab2:CreateButton({
+   Name = "Nameless Admin",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+   end,
+})
+local AntiLog = Tab2:CreateButton({
+   Name = "No Logging",
+   Callback = function()
+   loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-NoLogging-13339'))()
+   end,
+})
+local DEX = Tab2:CreateButton({
+   Name = "DEX Explorer",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+   end,
+})
+local SysHub = Tab2:CreateButton({
+   Name = "System Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/AHMEDPLPL/System-hub/main/System%20hub%20V2', true))();
+   end,
+})
+local AnimLogger = Tab2:CreateButton({
+   Name = "Animation Logger",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Animation-Logger-13175"))()
+   end,
+})
+local APIs = Tab2:CreateButton({
+   Name = "API Library",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Tropxzz/Scripts/main/apilibrary.lua",true))()
+   end,
+})
+local Reaper = Tab2:CreateButton({
+   Name = "Reaper Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+   end,
+})
+local Emoji = Tab2:CreateButton({
+   Name = "Emoji Chat",
+   Callback = function()
+   loadstring(game:HttpGetAsync'https://raw.githubusercontent.com/Exunys/Emoji-Chat/main/Resources/Main.lua')''
+   end,
+})
+local Krunox = Tab2:CreateButton({
+   Name = "Krunox",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/b2cnJNar"))()
+   end,
+})
+local VR = Tab2:CreateButton({
+   Name = "CLOVR",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/vr.lua"))()()
+   end,
+})
+if not table.find(solara, string.lower(identifyexecutor())) then
+    local RSPY = Tab2:CreateButton({
+     Name = "Remote Spy",
+     Callback = function()
+     loadstring(game:HttpGetAsync("https://github.com/richie0866/remote-spy/releases/latest/download/RemoteSpy.lua"))()
+     end,
+})
+else
+end
+if not table.find(solara, string.lower(identifyexecutor())) then
+    local CMDX = Tab2:CreateButton({
+    Name = "CMD-X",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+    end,
+})
+else
+    local CMDX = Tab2:CreateButton({
+    Name = "CMD-X",
+    Callback = function()
+    --credits to Zxeno and Comet Team for making this work
+    loadstring(game:HttpGet("https://pastebin.com/raw/iDUXa7zH", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+    end,
+})
+end
+local IY = Tab2:CreateButton({
+    Name = "Infinite Yield",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    end,
+})
+local ESP = Tab2:CreateButton({
+   Name = "Unnamed ESP",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))()
+   end,
+})
+local Sirius = Tab2:CreateButton({
+    Name = "Sirius",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SiriusSoftwareLTD/sirius/request/source.lua"))()
+    end,
+})
+local Chatbypass = Tab2:CreateButton({
+    Name = "Verge Chat Bypasser",
+    Callback = function()
+    Rayfield:Notify({
+    Title = "Clipflip GUI v2",
+    Content = "This script has a key system. Current working key is &6IvM84n0TjaY! and was copied (if supported).",
+    Duration = 10,
+    Image = 4483362458,
+    Actions = { -- Notification Buttons
+        Ignore = {
+            Name = "Okay",
+            Callback = function()
+         end
+    },
+    },
+    })
+    setclipboard("&6IvM84n0TjaY!")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vqmpjayZ/Bypass/main/v3rge"))()
+    end,
+})
+local Thunder = Tab2:CreateButton({
+    Name = "Thunder Client",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderScriptSolutions/ThunderClientForSolara/main/ThunderClientForSolara"))()
+    end,
+})
+local Owl = Tab2:CreateButton({
+    Name = "Owl Hub",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+    end,
+})
+local ZapHub = Tab2:CreateButton({
+    Name = "Zap Hub",
+    Callback = function()
+    loadstring(game:HttpGet('https://zaphub.xyz/Exec'))()
+    end,
+})
+local Fates = Tab2:CreateButton({
+    Name = "Fates Admin",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+    end,
+})
+local SaveInstance = Tab3:CreateButton({
+    Name = "Download Game",
+    Callback = function()
+    saveinstance()
+    end,
+})
+local FuckAdonis = Tab3:CreateButton({
+    Name = "Bypass Adonis Anti-Cheat",
+    Callback = function()
+    loadstring(game:HttpGetAsync("https://pastebin.com/raw/BDAaKr8f"))()
+    end,
+})
+local FakePrivateSrv = Tab3:CreateButton({
+    Name = "Teleport to a Fake Private Server (unsupported by most executors)",
+    Callback = function()
+    loadstring(game:HttpGetAsync("https://pastebin.com/raw/0D1kCMfQ"))()
+    end,
+})
+local FpsUnlock = Tab3:CreateButton({
+    Name = "Unlock FPS",
+    Callback = function()
+    setfpscap(1000)
+    end,
+})
+local CopyGameId = Tab3:CreateButton({
+    Name = "Copy Game ID",
+    Callback = function()
+    setclipboard(game.PlaceId)
+    end,
+})
+local About1 = Tab100:CreateSection("Clipflip GUI Beta")
+local About2 = Tab100:CreateSection("Made by Clipflip - discord.gg/Q6g4W2zCgv")
+local About3 = Tab100:CreateSection("version 2.0.26 - ".. identifyexecutor())
+if not table.find(supported, string.lower(identifyexecutor())) then
+    if not table.find(unsupported, string.lower(identifyexecutor())) then
+        Rayfield:Notify({
+   Title = "Clipflip GUI v2",
+   Content = "You are using an unverified executor - ".. identifyexecutor().. ". Some features may not work. We recommend Solara or Arceus X.",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay",
+         Callback = function()
+      end
+   },
+},
+})
+    else
+                Rayfield:Notify({
+   Title = "Clipflip GUI v2",
+   Content = "You are using an unsupported executor - ".. identifyexecutor().. ". Some features may not work. We recommend Solara or Arceus X.",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay",
+         Callback = function()
+      end
+   },
+},
+})
+    end
+else
+    print("Welcome to Clipflip GUI v2")
+end
+else
+    warn(identifyexecutor().. " is a blacklisted executor. Please use a different one.")
+    loadstring(game:HttpGet("https://pastebin.com/raw/XrFUS2Ya"))()
+end
