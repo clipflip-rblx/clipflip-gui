@@ -45,7 +45,7 @@ Tabs.Home:AddParagraph({
         Content = "User ID is ".. lplayer.UserId.. "."
     })
 Tabs.Home:AddParagraph({
-        Title = "You are playing ".. gamenameclipflip .. "."
+        Title = "You are playing ".. gamenameclipflip.. ".",
         Content = "Game ID is"
     })
     Tabs.Main:AddButton({
