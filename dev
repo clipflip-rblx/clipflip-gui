@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 local clipflipver = "2.0.28"
 local buildtype = "Canary"
 local lplayer = game.Players.LocalPlayer
-local gamenameclipflip = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon", "moreunc"}
 local unsupported = {"incognito", "evon", "fluxus", "lunar"}
 local solara = {"solara"}
@@ -45,7 +45,7 @@ Tabs.Home:AddParagraph({
         Content = "User ID is ".. lplayer.UserId.. "."
     })
 Tabs.Home:AddParagraph({
-        Title = "You are playing ".. gamenameclipflip.. ".",
+        Title = "You are playing "..gameName.. ".",
         Content = "Game ID is"
     })
     Tabs.Main:AddButton({
