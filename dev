@@ -60,7 +60,7 @@ Tabs.Home:AddParagraph({
     })
 Tabs.Home:AddParagraph({
         Title = "Your username is ".. player.Name.. ".",
-        Content = "User ID is ".. plr.UserId.. "."
+        Content = "User ID is ".. player.UserId.. "."
     })
 Tabs.Home.AddParagraph({
          Title = "You are playing ".. game.. ".",
