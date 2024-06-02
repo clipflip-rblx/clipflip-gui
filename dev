@@ -1,8 +1,10 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-local clipflipver = "2.0.27"
-local buildtype = "Development Version"
+local clipflipver = "2.0.28"
+local buildtype = "Canary"
+local player = game.Players.LocalPlayer
+local game = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon", "moreunc"}
 local unsupported = {"incognito", "evon", "fluxus", "lunar"}
 local solara = {"solara"}
@@ -23,6 +25,7 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
+    Home = Window:AddTab({ Title = "Home", Icon = "home" }),
     Main = Window:AddTab({ Title = "Executor Testing", Icon = "laptop" }),
     Scripts = Window:AddTab({ Title = "Popular Scripts", Icon = "scroll" }),
     UsefulTools = Window:AddTab({ Title = "Useful Tools", Icon = "hammer"}),
@@ -51,6 +54,18 @@ else
 end
 else
 end
+Tabs.Home:AddParagraph({
+        Title = "Welcome to Clipflip GUI ".. buildtype.. ".",
+        Content = "Enjoy your stay!"
+    })
+Tabs.Home:AddParagraph({
+        Title = "Your username is ".. plr.Name.. ".",
+        Content = "User ID is ".. plr.UserId.. "."
+    })
+Tabs.Home.AddParagraph({
+         Title = "You are playing ".. game.. ".",
+         Content = "The ID is ".. game.PlaceId.. "."
+    })
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
         Description = "Gives you information about how many functions your executor supports",
