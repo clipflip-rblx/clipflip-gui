@@ -8,6 +8,7 @@ local lplayer = game.Players.LocalPlayer
 local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon", "moreunc"}
 local unsupported = {"incognito", "evon", "fluxus", "lunar"}
 local solara = {"solara"}
+local lgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 if not table.find(solara, string.lower(identifyexecutor())) then
 else
     enablenilinstances()
@@ -18,7 +19,7 @@ local Window = Fluent:CreateWindow({ Title = "Clipflip GUI " .. clipflipver, Sub
 local Tabs = {
     Home = Window:AddTab({ Title = "Home", Icon = "home" }),
     Main = Window:AddTab({ Title = "Executor Testing", Icon = "laptop" }),
-    Admin = Window:AddTab({ Title = "Admin", Icon = "drill" }),
+    Admin = Window:AddTab({ Title = "Admin", Icon = "code-xml" }),
     Scripts = Window:AddTab({ Title = "Popular Scripts", Icon = "scroll" }),
     UsefulTools = Window:AddTab({ Title = "Useful Tools", Icon = "hammer"}),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
@@ -43,6 +44,10 @@ Tabs.Home:AddParagraph({
 Tabs.Home:AddParagraph({
         Title = "Your username is ".. lplayer.Name.. ".",
         Content = "User ID is ".. lplayer.UserId.. "."
+    })
+Tabs.Home:AddParagraph({
+        Title = "You are playing ".. lgamename.. "."
+        Content = "Game ID is ".. game.PlaceId.. "."
     })
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
