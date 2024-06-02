@@ -63,8 +63,8 @@ Tabs.Home:AddParagraph({
         Content = "User ID is ".. lplayer.UserId.. "."
     })
 Tabs.Home.AddParagraph({
-         Title = "You are playing ".. lgamename.. ".",
-         Content = "The game ID is ".. game.PlaceId.. "."
+         Title = "test",
+         Content = "Th"
     })
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
