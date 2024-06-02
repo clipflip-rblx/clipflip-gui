@@ -18,7 +18,7 @@ local Window = Fluent:CreateWindow({ Title = "Clipflip GUI " .. clipflipver, Sub
 local Tabs = {
     Home = Window:AddTab({ Title = "Home", Icon = "home" }),
     Main = Window:AddTab({ Title = "Executor Testing", Icon = "laptop" }),
-    Admin = Window:AddTab({ Title = "Admin", Icon = "code-xml" }),
+    Admin = Window:AddTab({ Title = "Admin", Icon = "code" }),
     Scripts = Window:AddTab({ Title = "Popular Scripts", Icon = "scroll" }),
     UsefulTools = Window:AddTab({ Title = "Useful Tools", Icon = "hammer"}),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
@@ -45,7 +45,7 @@ Tabs.Home:AddParagraph({
         Content = "User ID is ".. lplayer.UserId.. "."
     })
 Tabs.Home:AddParagraph({
-        Title = "You are playing ".. gamenameclipflip.. "."
+        Title = "You are playing ".. gamenameclipflip .. "."
         Content = "Game ID is"
     })
     Tabs.Main:AddButton({
