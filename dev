@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 local clipflipver = "2.0.28"
 local buildtype = "Canary"
 local lplayer = game.Players.LocalPlayer
-local gamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local lgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon", "moreunc"}
 local unsupported = {"incognito", "evon", "fluxus", "lunar"}
 local solara = {"solara"}
@@ -63,8 +63,8 @@ Tabs.Home:AddParagraph({
         Content = "User ID is ".. lplayer.UserId.. "."
     })
 Tabs.Home.AddParagraph({
-         Title = "You are playing ".. gamename.. ".",
-         Content = "The ID is ".. game.GameId.. "."
+         Title = "You are playing ".. lgamename.. ".",
+         Content = "The game ID is ".. game.GameId.. "."
     })
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
