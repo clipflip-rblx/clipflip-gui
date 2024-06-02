@@ -222,8 +222,13 @@ Tabs.QuickCmds:AddButton({
                     {
                         Title = "Okay",
                         Callback = function()
-                               game.Players.LocalPlayer.Character.Head.CanCollide = false
-		               game.Players.LocalPlayer.Character.Torso.CanCollide = false
+                               if game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
                         end
                     },
                     {
