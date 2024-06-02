@@ -46,7 +46,7 @@ Tabs.Home:AddParagraph({
     })
 Tabs.Home:AddParagraph({
         Title = "You are playing "..gameName.. ".",
-        Content = "Game ID is"..game.PlaceId.."."
+        Content = "Game ID is".. game.PlaceId .."."
     })
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
