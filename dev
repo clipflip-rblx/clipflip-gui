@@ -38,10 +38,7 @@ do
 if not table.find(supported, string.lower(identifyexecutor())) then
  if not table.find(unsupported, string.lower(identifyexecutor())) then
     Fluent:Notify({
-        Title = "Unverified executor",
-        Content = getexecutorname().. " is an unverified executor.",
-        SubContent = "We recommend using Arceus X or Solara.",
-        Duration = 10
+        Title = "Unverified executor", Content = getexecutorname().. " is an unverified executor.", SubContent = "We recommend using Arceus X or Solara.", Duration = 10
     })
 else
     Fluent:Notify({
