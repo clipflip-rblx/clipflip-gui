@@ -3,7 +3,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local clipflipver = "2.0.28"
 local buildtype = "Canary"
-local player = game.Players.LocalPlayer
+local lplayer = game.Players.LocalPlayer
 local gamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon", "moreunc"}
 local unsupported = {"incognito", "evon", "fluxus", "lunar"}
@@ -59,8 +59,8 @@ Tabs.Home:AddParagraph({
         Content = "Enjoy your stay!"
     })
 Tabs.Home:AddParagraph({
-        Title = "Your username is ".. player.Name.. ".",
-        Content = "User ID is ".. player.UserId.. "."
+        Title = "Your username is ".. lplayer.Name.. ".",
+        Content = "User ID is ".. lplayer.UserId.. "."
     })
 Tabs.Home.AddParagraph({
          Title = "You are playing ".. gamename.. ".",
