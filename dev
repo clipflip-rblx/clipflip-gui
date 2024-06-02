@@ -211,7 +211,7 @@ Tabs.Home:AddParagraph({
             })
         end
     })
-Tabs.quickcmds:AddButton({
+Tabs.QuickCmds:AddButton({
         Title = "Noclip",
         Description = "Walk thru walls",
         Callback = function()
@@ -222,8 +222,8 @@ Tabs.quickcmds:AddButton({
                     {
                         Title = "Okay",
                         Callback = function()
-                             game.Players.LocalPlayer.Character.Head.CanCollide = false
-		                     game.Players.LocalPlayer.Character.Torso.CanCollide = false
+                               game.Players.LocalPlayer.Character.Head.CanCollide = false
+		               game.Players.LocalPlayer.Character.Torso.CanCollide = false
                         end
                     },
                     {
