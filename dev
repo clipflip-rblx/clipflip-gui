@@ -13,15 +13,7 @@ else
 end
 
 
-local Window = Fluent:CreateWindow({
-    Title = "Clipflip GUI " .. clipflipver,
-    SubTitle = buildtype,
-    TabWidth = 160,
-    Size = UDim2.fromOffset(580, 460),
-    Acrylic = false,
-    Theme = "Dark",
-    MinimizeKey = D
-})
+local Window = Fluent:CreateWindow({ Title = "Clipflip GUI " .. clipflipver, SubTitle = buildtype, TabWidth = 160, Size = UDim2.fromOffset(580, 460), Acrylic = false, Theme = "Dark", MinimizeKey = D})
 
 local Tabs = {
     Home = Window:AddTab({ Title = "Home", Icon = "home" }),
@@ -37,16 +29,9 @@ local Options = Fluent.Options
 do
 if not table.find(supported, string.lower(identifyexecutor())) then
  if not table.find(unsupported, string.lower(identifyexecutor())) then
-    Fluent:Notify({
-        Title = "Unverified executor", Content = getexecutorname().. " is an unverified executor.", SubContent = "We recommend using Arceus X or Solara.", Duration = 10
-    })
+    Fluent:Notify({ Title = "Unverified executor", Content = getexecutorname().. " is an unverified executor.", SubContent = "We recommend using Arceus X or Solara.", Duration = 10})
 else
-    Fluent:Notify({
-        Title = "Unsupported executor",
-        Content = getexecutorname().. " is an unsupported executor.",
-        SubContent = "We recommend using Arceus X or Solara.",
-        Duration = 10
-    })
+    Fluent:Notify({ Title = "Unsupported executor", Content = getexecutorname().. " is an unsupported executor.", SubContent = "We recommend using Arceus X or Solara.",Duration = 10})
 end
 else
 end
@@ -781,10 +766,6 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 
 Window:SelectTab(1)
 
-Fluent:Notify({
-    Title = "Clipflip GUI",
-    Content = "The script has been loaded.",
-    Duration = 8
-})
+Fluent:Notify({ Title = "Clipflip GUI", Content = "The script has been loaded.",Duration = 8 })
 
 SaveManager:LoadAutoloadConfig()
