@@ -768,4 +768,3 @@ Window:SelectTab(1)
 
 Fluent:Notify({ Title = "Clipflip GUI", Content = "The script has been loaded.",Duration = 8 })
 SaveManager:LoadAutoloadConfig()
-loadstring(game:HttpGet('https://pastebin.com/raw/1W8RQ5g7'))()
