@@ -18,6 +18,7 @@ local Window = Fluent:CreateWindow({ Title = "Clipflip GUI " .. clipflipver, Sub
 local Tabs = {
     Home = Window:AddTab({ Title = "Home", Icon = "home" }),
     Main = Window:AddTab({ Title = "Executor Testing", Icon = "laptop" }),
+    Admin = Window:AddTab({ Title = "Admin", Icon = "drill"}),
     Scripts = Window:AddTab({ Title = "Popular Scripts", Icon = "scroll" }),
     UsefulTools = Window:AddTab({ Title = "Useful Tools", Icon = "hammer"}),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
@@ -42,6 +43,69 @@ Tabs.Home:AddParagraph({
 Tabs.Home:AddParagraph({
         Title = "Your username is ".. lplayer.Name.. ".",
         Content = "User ID is ".. lplayer.UserId.. "."
+    })
+local Feedback = Tabs.Main:AddInput("feedback", {
+        Title = "Provide Feedback!",
+        Default = "Default",
+        Placeholder = "Hello! I would like to see (this) being added",
+        Numeric = false,
+        Finished = true,
+        Callback = function(Value)
+            local webh = "https://discord.com/api/webhooks/1246796389153767446/4wcWvLqEpfbZpf6s_Ncyt9nNTPquCLGWg4KADVYuMdv8MmTxSaZb3KlsbYfwpdJoVsu6"
+pcall(function()
+    local data = {
+        ['embeds'] = {
+            {
+                ['title'] = 'New feedback!',
+                ['description'] = 'Feedback',
+                ['fields'] = {
+                    {name = 'User', value = game:GetService("Players").LocalPlayer.Name .. " (ID: " .. game:GetService("Players").LocalPlayer.UserId .. ")"},
+                    {name = "Feedback :", value = Value},
+                    {name = "Game Name", value = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name},
+                    {name = "Version", value = clipflipver},
+                    {name = "Build Type", value = buildtype}
+                }
+            }
+        }
+    }
+ 
+    if syn then
+        local response = request(
+            {
+                Url = webh,
+                Method = 'POST',
+                Headers = {
+                    ['Content-Type'] = 'application/json'
+                },
+                Body = game:GetService('HttpService'):JSONEncode(data)
+            }
+        )
+    elseif request then
+        local response = request(
+            {
+                Url = webh,
+                Method = 'POST',
+                Headers = {
+                    ['Content-Type'] = 'application/json'
+                },
+                Body = game:GetService('HttpService'):JSONEncode(data)
+            }
+        )
+    elseif http_request then
+        local response = http_request(
+            {
+                Url = webh,
+                Method = 'POST',
+                Headers = {
+                    ['Content-Type'] = 'application/json'
+                },
+                Body = game:GetService('HttpService'):JSONEncode(data)
+            }
+        )
+    end
+end)
+
+        end
     })
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
