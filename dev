@@ -7,7 +7,6 @@ local lplayer = game.Players.LocalPlayer
 local supported = {"solara", "codex", "arceus x", "delta", "hydrogen", "vega x", "frost", "frostware", "ethos", "alysse", "alysse android", "trigon evo", "trigon", "moreunc"}
 local unsupported = {"incognito", "evon", "fluxus", "lunar"}
 local solara = {"solara"}
-local lgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 if not table.find(solara, string.lower(identifyexecutor())) then
 else
     enablenilinstances()
@@ -45,8 +44,8 @@ Tabs.Home:AddParagraph({
         Content = "User ID is ".. lplayer.UserId.. "."
     })
 Tabs.Home:AddParagraph({
-        Title = "You are playing ".. lgamename.. ".",
-        Content = "Game ID is ".. game.PlaceId.. "."
+        Title = "You are playing",
+        Content = "Game ID is"
     })
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
