@@ -61,10 +61,6 @@ Tabs.Home:AddParagraph({
         Title = "Your username is ".. lplayer.Name.. ".",
         Content = "User ID is ".. lplayer.UserId.. "."
     })
-Tabs.Home.AddParagraph({
-         Title = "test",
-         Content = "Th"
-    })
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
         Description = "Gives you information about how many functions your executor supports",
