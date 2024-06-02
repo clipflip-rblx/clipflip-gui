@@ -1,4 +1,5 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+loadstring(game:HttpGet('https://pastebin.com/raw/fBQdFyRB'))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local clipflipver = "2.0.28"
@@ -768,4 +769,3 @@ Window:SelectTab(1)
 
 Fluent:Notify({ Title = "Clipflip GUI", Content = "The script has been loaded.",Duration = 8 })
 SaveManager:LoadAutoloadConfig()
-loadstring(game:HttpGet('https://pastebin.com/raw/fBQdFyRB'))()
