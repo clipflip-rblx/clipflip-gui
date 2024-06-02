@@ -21,6 +21,7 @@ local Tabs = {
     Admin = Window:AddTab({ Title = "Admin", Icon = "code" }),
     Scripts = Window:AddTab({ Title = "Popular Scripts", Icon = "scroll" }),
     UsefulTools = Window:AddTab({ Title = "Useful Tools", Icon = "hammer"}),
+    QuickCmds = Window:AddTab({ Title = "Quick Commands", Icon = "terminal"}),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     About = Window:AddTab({ Title = "About", Icon = "info" })
 }
@@ -46,7 +47,7 @@ Tabs.Home:AddParagraph({
     })
 Tabs.Home:AddParagraph({
         Title = "You are playing "..gameName.. ".",
-        Content = "Game ID is".. game.PlaceId .."."
+        Content = "Game ID is "..game.PlaceId.."."
     })
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
@@ -199,6 +200,30 @@ Tabs.Home:AddParagraph({
                         Title = "Okay",
                         Callback = function()
                              loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))()
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                        end
+                    }
+                }
+            })
+        end
+    })
+Tabs.quickcmds:AddButton({
+        Title = "Noclip",
+        Description = "Walk thru walls",
+        Callback = function()
+            Window:Dialog({
+                Title = "Information",
+                Content = "This will give you the ability to noclip.",
+                Buttons = {
+                    {
+                        Title = "Okay",
+                        Callback = function()
+                             game.Players.LocalPlayer.Character.Head.CanCollide = false
+		                     game.Players.LocalPlayer.Character.Torso.CanCollide = false
                         end
                     },
                     {
