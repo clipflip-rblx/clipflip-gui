@@ -21,13 +21,21 @@ function noclip()
 				end
 			end
 		end
-		wait(0.21) -- basic optimization
+		wait(0.21)
 	end
 	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
 end
 
 function clip()
-	if Noclip then Noclip:Disconnect() end
+	if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = true
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
 	Clip = true
 end
 if not table.find(solara, string.lower(identifyexecutor())) then
