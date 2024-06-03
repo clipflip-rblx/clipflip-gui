@@ -23,6 +23,12 @@ function noclip()
 		end
 		wait(0.21)
 	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
 end
 if not table.find(solara, string.lower(identifyexecutor())) then
 else
