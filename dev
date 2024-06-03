@@ -267,7 +267,7 @@ Tabs.QuickCmds:AddButton({
                     {
                         Title = "Okay",
                         Callback = function()
-                              clipflip()
+                              clip()
                         end
                     },
                     {
