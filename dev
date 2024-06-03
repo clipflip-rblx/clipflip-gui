@@ -23,7 +23,6 @@ function noclip()
 		end
 		wait(0.21)
 	end
-	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
 end
 
 function clip()
@@ -275,7 +274,7 @@ Tabs.QuickCmds:AddButton({
                     {
                         Title = "Okay",
                         Callback = function()
-                              Clip()
+                              clip()
                         end
                     },
                     {
