@@ -24,19 +24,6 @@ function noclip()
 		wait(0.21)
 	end
 end
-
-function clip()
-	if Clip == false and game.Players.LocalPlayer.Character ~= nil then
-			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
-					v.CanCollide = true
-				end
-			end
-		end
-		wait(0.21) -- basic optimization
-	end
-	Clip = true
-end
 if not table.find(solara, string.lower(identifyexecutor())) then
 else
     enablenilinstances()
@@ -252,29 +239,6 @@ Tabs.QuickCmds:AddButton({
                         Title = "Okay",
                         Callback = function()
                               noclip()
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                        end
-                    }
-                }
-            })
-        end
-    })
-Tabs.QuickCmds:AddButton({
-        Title = "Disable noclip",
-        Description = "Disable the ability to walk thru walls",
-        Callback = function()
-            Window:Dialog({
-                Title = "Information",
-                Content = "This will disable the ability to noclip.",
-                Buttons = {
-                    {
-                        Title = "Okay",
-                        Callback = function()
-                              clip()
                         end
                     },
                     {
