@@ -41,8 +41,9 @@ local Tabs = {
     Home = Window:AddTab({ Title = "Home", Icon = "home" }),
     Main = Window:AddTab({ Title = "Executor Testing", Icon = "laptop" }),
     Admin = Window:AddTab({ Title = "Admin", Icon = "code" }),
-    Scripts = Window:AddTab({ Title = "Popular Scripts", Icon = "scroll" }),
     UsefulTools = Window:AddTab({ Title = "Useful Tools", Icon = "hammer"}),
+    Game = Window:AddTab({ Title = "Game Specific", Icon = "gamepad-2" }),
+    Univ = Window:AddTab({ Title = "Universal", Icon = "earth" }),
     QuickCmds = Window:AddTab({ Title = "Quick Commands", Icon = "terminal"}),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     About = Window:AddTab({ Title = "About", Icon = "info" })
@@ -141,7 +142,7 @@ Tabs.Home:AddParagraph({
             })
         end
     })
-    Tabs.Scripts:AddButton({
+    Tabs.Univ:AddButton({
         Title = "Krunox",
         Description = "Great script, has many useful features",
         Callback = function()
@@ -210,7 +211,7 @@ Tabs.Home:AddParagraph({
             })
         end
     })
-        Tabs.Scripts:AddButton({
+        Tabs.Univ:AddButton({
         Title = "Owl Hub",
         Description = "Universal Script Hub",
         Callback = function()
@@ -279,7 +280,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-        Tabs.Scripts:AddButton({
+        Tabs.Game:AddButton({
         Title = "Zap Hub",
         Description = "Script Hub",
         Callback = function()
@@ -394,7 +395,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-        Tabs.Scripts:AddButton({
+        Tabs.Univ:AddButton({
         Title = "Sirius",
         Description = "All-in-one package for exploiters",
         Callback = function()
@@ -417,7 +418,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-        Tabs.Scripts:AddButton({
+        Tabs.Univ:AddButton({
         Title = "System Hub",
         Description = "Universal script hub",
         Callback = function()
@@ -440,7 +441,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-        Tabs.Scripts:AddButton({
+        Tabs.Game:AddButton({
         Title = "Thunder Client",
         Description = "Great Arsenal script, has aimbot, ESP and many other features",
         Callback = function()
@@ -532,7 +533,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-    Tabs.Scripts:AddButton({
+    Tabs.Game:AddButton({
         Title = "Reaper Hub",
         Description = "Universal script hub",
         Callback = function()
@@ -555,7 +556,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-    Tabs.Scripts:AddButton({
+    Tabs.Univ:AddButton({
         Title = "Emoji Chat",
         Description = "Replaces in-game text with emojis like in Discord, for example :skull: will become the skull emoji",
         Callback = function()
@@ -768,7 +769,7 @@ Tabs.QuickCmds:AddButton({
         end
     })
     end
-    Tabs.Scripts:AddButton({
+    Tabs.Univ:AddButton({
         Title = "Verge Chat Bypasser",
         Description = "Bypass the Roblox chat filter",
         Callback = function()
