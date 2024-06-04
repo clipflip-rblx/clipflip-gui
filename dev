@@ -43,7 +43,7 @@ local Tabs = {
     Admin = Window:AddTab({ Title = "Admin", Icon = "code" }),
     UsefulTools = Window:AddTab({ Title = "Useful Tools", Icon = "hammer"}),
     Game = Window:AddTab({ Title = "Game Specific", Icon = "gamepad" }),
-    Univ = Window:AddTab({ Title = "Universal", Icon = "earth" }),
+    Univ = Window:AddTab({ Title = "Universal", Icon = "globe" }),
     QuickCmds = Window:AddTab({ Title = "Quick Commands", Icon = "terminal"}),
     Scripts = Window:AddTab({ Title = "Scripts", Icon = "scroll"}),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
