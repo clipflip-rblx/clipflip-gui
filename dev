@@ -487,7 +487,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-        Tabs.Scripts:AddButton({
+        Tabs.Univ:AddButton({
         Title = "Animation Logger",
         Description = "Log animation IDs that are played in your game",
         Callback = function()
@@ -510,7 +510,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-    Tabs.Scripts:AddButton({
+    Tabs.Univ:AddButton({
         Title = "API Library",
         Description = "Use different fun APIs while in-game",
         Callback = function()
@@ -671,7 +671,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-       Tabs.Scripts:AddButton({
+       Tabs.Univ:AddButton({
         Title = "Unnamed ESP",
         Description = "Simple, and easy-to-use ESP for Roblox.",
         Callback = function()
@@ -694,7 +694,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-     Tabs.Scripts:AddButton({
+     Tabs.Univ:AddButton({
         Title = "No Logging",
         Description = "Anti-logging script to prevent Roblox to ban you for bypassing.",
         Callback = function()
