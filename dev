@@ -165,7 +165,7 @@ Tabs.Home:AddParagraph({
             })
         end
     })
-    Tabs.Scripts:AddButton({
+    Tabs.Univ:AddButton({
         Title = "CLOVR",
         Description = "Fun VR script",
         Callback = function()
@@ -188,7 +188,7 @@ Tabs.Home:AddParagraph({
             })
         end
     })
-        Tabs.Scripts:AddButton({
+        Tabs.Univ:AddButton({
         Title = "Remote Spy",
         Description = "Detect Remotes that are being fired",
         Callback = function()
