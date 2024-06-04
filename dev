@@ -1,7 +1,7 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-local clipflipver = "2.0.28"
+local clipflipver = "2.0.29"
 local buildtype = "Canary"
 local lplayer = game.Players.LocalPlayer
 local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
@@ -625,7 +625,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-    Tabs.Scripts:AddButton({
+    Tabs.Univ:AddButton({
         Title = "DEX Explorer",
         Description = "View and edit your game's models, like in Studio!",
         Callback = function()
@@ -818,5 +818,5 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 
 Window:SelectTab(1)
 
-Fluent:Notify({ Title = "Clipflip GUI", Content = "The script has been loaded.",Duration = 8 })
+Fluent:Notify({ Title = "Clipflip GUI", Content = "The script has loaded successfully.",Duration = 8 })
 SaveManager:LoadAutoloadConfig()
