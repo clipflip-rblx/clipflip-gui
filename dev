@@ -1,7 +1,7 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-local clipflipver = "2.0.29"
+local clipflipver = "2.0.30"
 local buildtype = "Canary"
 local lplayer = game.Players.LocalPlayer
 local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
@@ -43,7 +43,10 @@ local Tabs = {
     Admin = Window:AddTab({ Title = "Admin", Icon = "code" }),
     UsefulTools = Window:AddTab({ Title = "Useful Tools", Icon = "hammer"}),
     Game = Window:AddTab({ Title = "Game Specific", Icon = "gamepad" }),
-    Univ = Window:AddTab({ Title = "Universal", Icon = "contrast" }),
+    Univ = Window:AddTab({ Title = "Universal", Icon = "globe" }),
+    Chat = Window:AddTab({ Title = "Chat", Icon = "message-circle" }),
+    Aim = Window:AddTab({ Title = "Combat", Icon = "crosshair" }),
+    Qol = Window:AddTab({ Title = "Quality of life", Icon = "list-plus" }),
     QuickCmds = Window:AddTab({ Title = "Quick Commands", Icon = "terminal"}),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     About = Window:AddTab({ Title = "About", Icon = "info" })
@@ -72,6 +75,10 @@ Tabs.Home:AddParagraph({
         Title = "You are playing "..gameName.. ".",
         Content = "Game ID is "..game.PlaceId.."."
     })
+ Tabs.Home:AddParagraph({
+     Title = "You are using "..identifyexecutor().. ".",
+     Content = "It is level "..getthreadidentity().."."
+  })
     Tabs.Main:AddButton({
         Title = "Executor UNC Test",
         Description = "Gives you information about how many functions your executor supports",
@@ -83,6 +90,7 @@ Tabs.Home:AddParagraph({
                     {
                         Title = "Okay",
                         Callback = function()
+                            local lastexecuted
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua"))()
                         end
                     },
@@ -142,7 +150,7 @@ Tabs.Home:AddParagraph({
             })
         end
     })
-    Tabs.Univ:AddButton({
+    Tabs.Qol:AddButton({
         Title = "Krunox",
         Description = "Great script, has many useful features",
         Callback = function()
@@ -211,9 +219,9 @@ Tabs.Home:AddParagraph({
             })
         end
     })
-        Tabs.Univ:AddButton({
+        Tabs.Aim:AddButton({
         Title = "Owl Hub",
-        Description = "Universal Script Hub",
+        Description = "Universal Script Hub with aimbot and ESP",
         Callback = function()
             Window:Dialog({
                 Title = "Information",
@@ -282,7 +290,7 @@ Tabs.QuickCmds:AddButton({
     })
         Tabs.Game:AddButton({
         Title = "Zap Hub",
-        Description = "Script Hub",
+        Description = "Multiple popular games",
         Callback = function()
             Window:Dialog({
                 Title = "Information",
@@ -395,7 +403,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-        Tabs.Univ:AddButton({
+        Tabs.Qol:AddButton({
         Title = "Sirius",
         Description = "All-in-one package for exploiters",
         Callback = function()
@@ -443,7 +451,7 @@ Tabs.QuickCmds:AddButton({
     })
         Tabs.Game:AddButton({
         Title = "Thunder Client",
-        Description = "Great Arsenal script, has aimbot, ESP and many other features",
+        Description = "Game: Arsenal",
         Callback = function()
             Window:Dialog({
                 Title = "Information",
@@ -453,6 +461,29 @@ Tabs.QuickCmds:AddButton({
                         Title = "Okay",
                         Callback = function()
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderScriptSolutions/ThunderClientForSolara/main/ThunderClientForSolara"))()
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                        end
+                    }
+                }
+            })
+        end
+    })
+    Tabs.Game:AddButton({
+        Title = "CMD v3",
+        Description = "Game: Kohls Admin House NBC",
+        Callback = function()
+            Window:Dialog({
+                Title = "Information",
+                Content = "This will execute CMD v3.",
+                Buttons = {
+                    {
+                        Title = "Okay",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/quivings/KAH/main/CMD%20v3.lua"))()
                         end
                     },
                     {
@@ -533,9 +564,9 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-    Tabs.Game:AddButton({
+    Tabs.Aim:AddButton({
         Title = "Reaper Hub",
-        Description = "Universal script hub",
+        Description = "Multiple popular games, has aimbot and ESP",
         Callback = function()
             Window:Dialog({
                 Title = "Information",
@@ -556,7 +587,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-    Tabs.Univ:AddButton({
+    Tabs.Chat:AddButton({
         Title = "Emoji Chat",
         Description = "Replaces in-game text with emojis like in Discord, for example :skull: will become the skull emoji",
         Callback = function()
@@ -671,7 +702,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-       Tabs.Univ:AddButton({
+       Tabs.Aim:AddButton({
         Title = "Unnamed ESP",
         Description = "Simple, and easy-to-use ESP for Roblox.",
         Callback = function()
@@ -694,7 +725,7 @@ Tabs.QuickCmds:AddButton({
             })
         end
     })
-     Tabs.Univ:AddButton({
+     Tabs.Chat:AddButton({
         Title = "No Logging",
         Description = "Anti-logging script to prevent Roblox to ban you for bypassing.",
         Callback = function()
@@ -769,7 +800,7 @@ Tabs.QuickCmds:AddButton({
         end
     })
     end
-    Tabs.Univ:AddButton({
+    Tabs.Chat:AddButton({
         Title = "Verge Chat Bypasser",
         Description = "Bypass the Roblox chat filter",
         Callback = function()
@@ -809,8 +840,8 @@ SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
 SaveManager:IgnoreThemeSettings()
 SaveManager:SetIgnoreIndexes({})
-InterfaceManager:SetFolder("FluentScriptHub")
-SaveManager:SetFolder("FluentScriptHub/specific-game")
+InterfaceManager:SetFolder("ClipfipScripts")
+SaveManager:SetFolder("ClipfipScripts/ClipflipGUI")
 
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
