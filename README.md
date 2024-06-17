@@ -14,7 +14,7 @@ Latest **public** version, has limited amount of features and Solara support.
 
 ## V3
 
-**Closed beta testing**, releasing soon. Promising over 100 features in the Script Hub!
+**Closed beta testing**, releasing soon. Promising over 100 features in the Script Hub, all supporting Solara!
 
 ## Contributing
 
