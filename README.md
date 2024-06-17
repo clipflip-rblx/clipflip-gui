@@ -21,6 +21,7 @@ Latest **public** version, has limited amount of features and Solara support.
 The script is closed-source **until V3 release**. Once V3 releases, there will be 2 methods to contribute:
 
 **- Make a suggestion in the Discord**
+
 **- Make a pull request**
 
 ## Enjoy!
