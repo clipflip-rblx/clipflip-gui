@@ -1,4 +1,6 @@
 # Clipflip GUI
+[![Solara Supported](https://img.shields.io/badge/Solara-Supported-purple
+)](https://discord.gg/realsolara)
 All-in-one script
 # Beta Version
 Uses the older UI library, quite stable
