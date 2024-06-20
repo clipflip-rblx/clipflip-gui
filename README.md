@@ -9,7 +9,7 @@ One of the best script hubs out there
 
 ## V2
 
-Latest **public** version, has limited amount of features and Solara support.
+Latest **stable** version, has limited amount of features and Solara support.
 ```loadstring(game:HttpGet("https://raw.githubusercontent.com/clipflip-rblx/clipflip-gui/master/2-0-32.lua"))()```
 
 ## V3 for Solara
