@@ -10,15 +10,21 @@ One of the best script hubs out there
 ## V2
 
 Latest **public** version, has limited amount of features and Solara support.
-```loadstring(game:HttpGet("https://raw.githubusercontent.com/clipflip-rblx/clipflip-gui/master/latest-loader.lua"))()```
+```loadstring(game:HttpGet("https://raw.githubusercontent.com/clipflip-rblx/clipflip-gui/master/2-0-32.lua"))()```
 
-## V3
+## V3 for Solara
 
-**Closed beta testing**, releasing soon. Promising over 100 features in the Script Hub, all supporting Solara!
+**Public beta released**, full release soon. Promising over 100 features in the Script Hub, all supporting Solara!
+```loadstring(game:HttpGet("https://raw.githubusercontent.com/clipflip-rblx/clipflip-gui/master/3.0.0PB.lua"))()```
+
+## V3 for Wave and Electron
+
+coming soon
+
 
 ## Contributing
 
-The script is closed-source **until V3 release**. Once V3 releases, there will be 2 methods to contribute:
+There are 2 methods to contribute:
 
 **- Make a suggestion in the Discord**
 
