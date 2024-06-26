@@ -1,7 +1,7 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-local clipflipver = "3.0.0"
+local clipflipver = "3.0.0 | Public Beta 3"
 local plcid = game.PlaceId
 local buildtype = "| Lite"
 local lplayer = game.Players.LocalPlayer
@@ -20,10 +20,10 @@ local Tabs = {
     Misc = Window:AddTab({ Title = "Misc", Icon = "dice-6" }),
     UI = Window:AddTab({ Title = "GUI", Icon = "layout-grid" }),
     Spoof = Window:AddTab({ Title = "Spoofs", Icon = "ghost" }),
+    Log = Window:AddTab({ Title = "Changelogs", Icon = "file-clock" }),
     Aim = Window:AddTab({ Title = "Combat", Icon = "crosshair" }),
     Qol = Window:AddTab({ Title = "Quality of life", Icon = "list-plus" }),
     Cmds = Window:AddTab({ Title = "Commands", Icon = "terminal" }),
-    Log = Window:AddTab({ Title = "Changelog", Icon = "file-clock" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     About = Window:AddTab({ Title = "About", Icon = "info" })
 }
@@ -32,22 +32,6 @@ local Options = Fluent.Options
 --custom functions
 local function CUSTOMFUNCS_fake_script()
 local script = Instance.new('LocalScript', NewInstanceScript)
-function getplatform()
-    local inputsrv = game:GetService("UserInputService")
-        if inputsrv:GetPlatform() ~= "Enum.Platform.Windows" then
-            return 'Windows'
-        elseif inputsrv:GetPlatform() ~= "Enum.Platform.OSX" then
-            return 'macOS'
-        elseif inputsrv:GetPlatform() ~= "Enum.Platform.IOS" then
-            return 'iOS'
-        elseif inputsrv:GetPlatform() ~= "Enum.Platform.UWP" then
-            return 'Windows'
-        elseif inputsrv:GetPlatform() ~= "Enum.Platform.Android" then
-            return 'Android'
-	    else return 'Unknown'
-    end
-end
-        end
 function getclientid()
     local analyticsrv = game:GetService("RbxAnalyticsService")
     return analyticsrv:GetClientId()
@@ -102,6 +86,7 @@ function kick(reason)
     game.Players.LocalPlayer:Kick(reason)
     return
 end
+end
 coroutine.wrap(CUSTOMFUNCS_fake_script)()
 
 do --main gui
@@ -125,7 +110,7 @@ do --main gui
         Content = "Game ID is "..getgameid()
     })
     Tabs.Home:AddParagraph({
-        Title = "You are using "..exploitname.. " version ".. getexecutorversion().. " on ".. getplatform(),
+        Title = "You are using "..exploitname.. " version ".. getexecutorversion(),
         Content = "It is level "..getthreadidentity()
     })
         Tabs.Home:AddParagraph({
@@ -444,6 +429,13 @@ end
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/Egg%20Tree%20Incremental"))()
         end
     })
+                Tabs.Game:AddButton({
+        Title = "Fight in a school",
+        Description = "",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/JayXSama/Fight-in-a-school/main/Solara"))()
+        end
+    })
             Tabs.Game:AddButton({
         Title = "Card Ride into Rdite",
         Description = "",
@@ -497,7 +489,7 @@ end
         Title = "Vega X Android UI",
         Description = "",
         Callback = function()
-            loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1241328065938980875/1252878152846282802/VegaXUIForSolara.txt?ex=6673d134&is=66727fb4&hm=025d1b712b81503a3e947cde04f17eb0ca15ef93a32b2dfe9fddeadaec0a619c&"))()
+            loadstring(game:HttpGet("https://paste.fo/raw/me1b5df1653d"))()
         end
     })
         Tabs.UI:AddButton({
@@ -582,14 +574,22 @@ end
         Title = "Spoof HWID",
         Description = "",
         Callback = function()
-                writefile("hwid-spoofed.txt", string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122)))
+                local encodedhwid = base64encode(string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..string.char(math.random(97,122))..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122))..math.random(1,9)..string.char(math.random(97,122)))
+                local decodedhwid = base64decode(encodedhwid)
                 local function SPOOFHWID_fake_script()
 	            local script = Instance.new('LocalScript', SpooferInstance)
 	            function gethwid()
-                    return readfile("hwid-spoofed.txt")
+                    return decodedhwid
 	            end
             end
             coroutine.wrap(SPOOFHWID_fake_script)()
+        end
+    })
+            Tabs.Spoof:AddButton({
+        Title = "Anti-Webhook",
+        Description = "",
+        Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/JUqusaQx'))()
         end
     })
         local spfhwid = Tabs.Spoof:AddInput("spfhwid", {
@@ -620,7 +620,14 @@ end
                 local function SPOOFIDENTITY_fake_script()
 	            local script = Instance.new('LocalScript', SpoofingInstance)
 	                function getthreadidentity()
-		                return Identity
+		                return Value
+	                end
+                    function getthreadcontext()
+		                return Value
+	                end
+                    function printidentity()
+		                print("Current identity is ".. Value)
+                        return
 	                end
                 end
                 coroutine.wrap(SPOOFIDENTITY_fake_script)()
@@ -801,12 +808,16 @@ end
         Content = clipflipver.. " - ".. exploitname
     })
         Tabs.About:AddParagraph({
+        Title = "You are using Clipflip GUI ".. buildtype,
+        Content = clipflipver.. " - ".. exploitname
+    })
+        Tabs.About:AddParagraph({
         Title = "Credits:",
         Content = "Clipflip - made this whole script\nViz - help with script implementation\nT - basic script optimisation\nFluent UI - base for this script\nCelery - inspired me to make this\nScriptblox.com - helped with finding good scripts\nplayer478129 - helped patch HWID spoofer detections"
     })
         Tabs.Log:AddParagraph({
-        Title = "3.0.0",
-        Content = "|+| Wrote Changelogs for V3\n|+| Added 12 New Games\n|+| Added Custom Functions\n|-| Removed Script Auto-Select"})
+        Title = "3.0.0 Public Beta 2",
+        Content = "|+| Wrote Changelogs for V3\n|+| Added 13 New Games\n|+| Added Custom Functions\n|-| Removed Script Auto-Select"})
     Tabs.Log:AddParagraph({
         Title = "3.0.0 Public Beta",
         Content = "|+| New Script loader\n|+| Added Spoofers\n|+| Script Optimisation\n|+| Added Game-based Script auto-selector\n|+| Added 20 New Scripts\n|+| Now open-source\n|+| Full Solara Support\n|-| Removed Broken Scripts"})
@@ -872,11 +883,10 @@ end
         Title = "1.0.0a Debug",
         Content = "|+| Private Beta Release"
     })
-end
-if not isfile("ClipflipScripts/ClipflipGUI") then
-
-else
-print("Saved settings loaded")
+            Tabs.About:AddParagraph({
+        Title = "Credits:",
+        Content = "Clipflip - made this whole script\nViz - help with script implementation\nT - basic script optimisation\nFluent UI - base for this script\nCelery - inspired me to make this\nScriptblox.com - helped with finding good scripts\nplayer478129 - helped patch HWID spoofer detections"
+    })
 end
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
@@ -891,5 +901,5 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 
 Window:SelectTab(1)
 
-Window:Dialog({Title = "Welcome to Clipflip GUI V3 Beta",Content = "If you encounter bugs, please report them in the Discord.",Buttons = {{Title = "OK",Callback = function()end}}})
+Window:Dialog({Title = "Welcome to Clipflip GUI V3",Content = "If you encounter bugs, please report them in the Discord.",Buttons = {{Title = "OK",Callback = function()end}}})
 SaveManager:LoadAutoloadConfig()
